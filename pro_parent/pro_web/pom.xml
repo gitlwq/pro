@@ -1,0 +1,116 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>pro_parent</groupId>
+    <artifactId>pro_parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>pro_web</artifactId>
+  <packaging>war</packaging>
+  
+  
+  <!-- 本项目依赖 -->
+    <dependencies>
+  
+
+
+  	<dependency>
+  		<groupId>pro_parent</groupId>
+  		<artifactId>pro_model</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  
+  	<dependency>
+  		<groupId>pro_parent</groupId>
+  		<artifactId>pro_dao</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  
+  <dependency>
+  		<groupId>pro_parent</groupId>
+  		<artifactId>pro_mapper</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  
+  	<dependency>
+  		<groupId>pro_parent</groupId>
+  		<artifactId>pro_services</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  
+  
+    	<dependency>
+  		<groupId>pro_parent</groupId>
+  		<artifactId>pro_api</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+    	<dependency>
+  		<groupId>pro_parent</groupId>
+  		<artifactId>pro_utils</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	
+  
+    	<dependency>
+  		<groupId>pro_parent</groupId>
+  		<artifactId>pro_utils</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	
+  	
+  	
+  	
+  	    <dependency>  
+        <groupId>ch.qos.logback</groupId>  
+        <artifactId>logback-classic</artifactId>  
+        <version>1.1.3</version>  
+    </dependency>  
+    <dependency>  
+        <groupId>org.logback-extensions</groupId>  
+        <artifactId>logback-ext-spring</artifactId>  
+        <version>0.1.2</version>  
+    </dependency>  
+    <dependency>  
+        <groupId>org.slf4j</groupId>  
+        <artifactId>jcl-over-slf4j</artifactId>  
+        <version>1.7.12</version>  
+    </dependency>  
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  </dependencies>
+	
+	<build>
+		<finalName>pro_web</finalName> <!-- install war name  -->
+		
+		<plugins>
+			 <plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.0-SNAPSHOT</version>
+				<configuration>
+					<url>http://localhost:8080</url>
+					<server>admin</server>
+				</configuration>
+			</plugin>
+		
+		</plugins>
+	
+	</build>  
+	  <properties>  
+                <!-- DB Resource -->  
+  
+                <log.moduleName>pro_web</log.moduleName>  
+                <log.base>logs</log.base>  
+                <log.other.level>DEBUG</log.other.level>  
+                <log.root.level>DEBUG</log.root.level>  
+                <log.stdout.ref><![CDATA[<appender-ref ref="stdout" />]]></log.stdout.ref>  
+                <maven.build.timestamp.format>yyyyMMdd</maven.build.timestamp.format>
+                <maven.build.version>1.0.4</maven.build.version>
+ </properties> 
+ 
+</project>
